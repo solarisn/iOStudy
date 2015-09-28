@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A20DFA91BB763AD007A352C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A20DFA81BB763AD007A352C /* Foundation.framework */; };
+		5A20DFAB1BB763B3007A352C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A20DFAA1BB763B3007A352C /* Security.framework */; };
+		5A20DFAD1BB763BE007A352C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A20DFAC1BB763BE007A352C /* CFNetwork.framework */; };
+		5A20DFAF1BB763E8007A352C /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A20DFAE1BB763E8007A352C /* libicucore.tbd */; };
 		5A22974B1BB73CE900CD690E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22974A1BB73CE900CD690E /* AppDelegate.swift */; };
 		5A22974D1BB73CE900CD690E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22974C1BB73CE900CD690E /* FirstViewController.swift */; };
 		5A22974F1BB73CE900CD690E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22974E1BB73CE900CD690E /* SecondViewController.swift */; };
@@ -15,6 +19,13 @@
 		5A2297571BB73CEA00CD690E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2297551BB73CEA00CD690E /* LaunchScreen.storyboard */; };
 		5A2297621BB73CEA00CD690E /* upTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2297611BB73CEA00CD690E /* upTests.swift */; };
 		5A22976D1BB73CEA00CD690E /* upUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22976C1BB73CEA00CD690E /* upUITests.swift */; };
+		5A3F6F241BB75B8300D4F6AA /* SocketIOClientSwift in Resources */ = {isa = PBXBuildFile; fileRef = 5A3F6F231BB75B8300D4F6AA /* SocketIOClientSwift */; settings = {ASSET_TAGS = (); }; };
+		5A993C951BB740CF00010A3E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A993C941BB740CF00010A3E /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		5A993C971BB740D700010A3E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A993C961BB740D700010A3E /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		5A993C991BB740E000010A3E /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A993C981BB740E000010A3E /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
+		5A993C9B1BB740E900010A3E /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A993C9A1BB740E900010A3E /* FBSDKMessengerShareKit.framework */; settings = {ASSET_TAGS = (); }; };
+		5A993C9D1BB7457300010A3E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A993C9C1BB7457300010A3E /* LoginController.swift */; settings = {ASSET_TAGS = (); }; };
+		5A993CA11BB75AC000010A3E /* SocketIO-iOS in Resources */ = {isa = PBXBuildFile; fileRef = 5A993CA01BB75AC000010A3E /* SocketIO-iOS */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A20DFA71BB7631B007A352C /* up-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "up-Bridging-Header.h"; sourceTree = "<group>"; };
+		5A20DFA81BB763AD007A352C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5A20DFAA1BB763B3007A352C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5A20DFAC1BB763BE007A352C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5A20DFAE1BB763E8007A352C /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		5A2297471BB73CE900CD690E /* up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = up.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A22974A1BB73CE900CD690E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A22974C1BB73CE900CD690E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +65,13 @@
 		5A2297681BB73CEA00CD690E /* upUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = upUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A22976C1BB73CEA00CD690E /* upUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upUITests.swift; sourceTree = "<group>"; };
 		5A22976E1BB73CEA00CD690E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A3F6F231BB75B8300D4F6AA /* SocketIOClientSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SocketIOClientSwift; path = ../../../dev/SocketIOClientSwift; sourceTree = "<group>"; };
+		5A993C941BB740CF00010A3E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../dev/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		5A993C961BB740D700010A3E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../dev/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		5A993C981BB740E000010A3E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		5A993C9A1BB740E900010A3E /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		5A993C9C1BB7457300010A3E /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		5A993CA01BB75AC000010A3E /* SocketIO-iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "SocketIO-iOS"; path = "../SocketIO-iOS"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +79,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A20DFAF1BB763E8007A352C /* libicucore.tbd in Frameworks */,
+				5A20DFAD1BB763BE007A352C /* CFNetwork.framework in Frameworks */,
+				5A20DFAB1BB763B3007A352C /* Security.framework in Frameworks */,
+				5A20DFA91BB763AD007A352C /* Foundation.framework in Frameworks */,
+				5A993C9B1BB740E900010A3E /* FBSDKMessengerShareKit.framework in Frameworks */,
+				5A993C971BB740D700010A3E /* FBSDKLoginKit.framework in Frameworks */,
+				5A993C951BB740CF00010A3E /* FBSDKCoreKit.framework in Frameworks */,
+				5A993C991BB740E000010A3E /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +110,12 @@
 		5A22973E1BB73CE900CD690E = {
 			isa = PBXGroup;
 			children = (
+				5A20DFA71BB7631B007A352C /* up-Bridging-Header.h */,
 				5A2297491BB73CE900CD690E /* up */,
 				5A2297601BB73CEA00CD690E /* upTests */,
 				5A22976B1BB73CEA00CD690E /* upUITests */,
 				5A2297481BB73CE900CD690E /* Products */,
+				5A993C931BB740AA00010A3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				5A22974A1BB73CE900CD690E /* AppDelegate.swift */,
+				5A993C9C1BB7457300010A3E /* LoginController.swift */,
 				5A22974C1BB73CE900CD690E /* FirstViewController.swift */,
 				5A22974E1BB73CE900CD690E /* SecondViewController.swift */,
 				5A2297501BB73CE900CD690E /* Main.storyboard */,
@@ -126,6 +160,24 @@
 				5A22976E1BB73CEA00CD690E /* Info.plist */,
 			);
 			path = upUITests;
+			sourceTree = "<group>";
+		};
+		5A993C931BB740AA00010A3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A20DFAE1BB763E8007A352C /* libicucore.tbd */,
+				5A20DFAC1BB763BE007A352C /* CFNetwork.framework */,
+				5A20DFAA1BB763B3007A352C /* Security.framework */,
+				5A20DFA81BB763AD007A352C /* Foundation.framework */,
+				5A3F6F231BB75B8300D4F6AA /* SocketIOClientSwift */,
+				5A993CA01BB75AC000010A3E /* SocketIO-iOS */,
+				5A993C9A1BB740E900010A3E /* FBSDKMessengerShareKit.framework */,
+				5A993C981BB740E000010A3E /* FBSDKShareKit.framework */,
+				5A993C961BB740D700010A3E /* FBSDKLoginKit.framework */,
+				5A993C941BB740CF00010A3E /* FBSDKCoreKit.framework */,
+			);
+			name = Frameworks;
+			path = up;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2297571BB73CEA00CD690E /* LaunchScreen.storyboard in Resources */,
+				5A993CA11BB75AC000010A3E /* SocketIO-iOS in Resources */,
 				5A2297541BB73CE900CD690E /* Assets.xcassets in Resources */,
 				5A2297521BB73CE900CD690E /* Main.storyboard in Resources */,
+				5A3F6F241BB75B8300D4F6AA /* SocketIOClientSwift in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A22974F1BB73CE900CD690E /* SecondViewController.swift in Sources */,
+				5A993C9D1BB7457300010A3E /* LoginController.swift in Sources */,
 				5A22974B1BB73CE900CD690E /* AppDelegate.swift in Sources */,
 				5A22974D1BB73CE900CD690E /* FirstViewController.swift in Sources */,
 			);
@@ -402,10 +457,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = /Users/snite/dev/FacebookSDK/;
 				INFOPLIST_FILE = up/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = study.up;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "up/up-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -413,10 +470,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = /Users/snite/dev/FacebookSDK/;
 				INFOPLIST_FILE = up/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = study.up;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "up/up-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -487,6 +546,7 @@
 				5A2297731BB73CEA00CD690E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A2297741BB73CEA00CD690E /* Build configuration list for PBXNativeTarget "upTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +555,7 @@
 				5A2297761BB73CEA00CD690E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A2297771BB73CEA00CD690E /* Build configuration list for PBXNativeTarget "upUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +564,7 @@
 				5A2297791BB73CEA00CD690E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
