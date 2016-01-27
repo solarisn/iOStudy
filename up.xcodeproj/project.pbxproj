@@ -21,6 +21,8 @@
 		5A22976D1BB73CEA00CD690E /* upUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A22976C1BB73CEA00CD690E /* upUITests.swift */; };
 		5A39F57C1BF9640800D30DE8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A39F57B1BF9640800D30DE8 /* ThirdViewController.swift */; };
 		5A39F57E1BF9647F00D30DE8 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A39F57D1BF9647F00D30DE8 /* FourthViewController.swift */; };
+		5A4313A61C54780200B54B60 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4313A51C54780200B54B60 /* SwiftyJSON.swift */; };
+		5A4313A81C54794F00B54B60 /* SwiftyJSON.swift in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4313A71C54794F00B54B60 /* SwiftyJSON.swift */; };
 		5A993C9D1BB7457300010A3E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A993C9C1BB7457300010A3E /* LoginController.swift */; };
 		5AD178C01C05157100CA9ED8 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD178B51C05157100CA9ED8 /* Bolts.framework */; };
 		5AD178C21C05157100CA9ED8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD178B71C05157100CA9ED8 /* FBSDKCoreKit.framework */; };
@@ -68,6 +70,9 @@
 		5A22976E1BB73CEA00CD690E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A39F57B1BF9640800D30DE8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		5A39F57D1BF9647F00D30DE8 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		5A4313A41C54780200B54B60 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
+		5A4313A51C54780200B54B60 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		5A4313A71C54794F00B54B60 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Frameworks/SwiftyJSON.swift; sourceTree = SOURCE_ROOT; };
 		5A993C941BB740CF00010A3E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../dev/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		5A993C961BB740D700010A3E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../dev/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		5A993C981BB740E000010A3E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -92,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4313A81C54794F00B54B60 /* SwiftyJSON.swift in Frameworks */,
 				5AD178C01C05157100CA9ED8 /* Bolts.framework in Frameworks */,
 				5AD178C21C05157100CA9ED8 /* FBSDKCoreKit.framework in Frameworks */,
 				5AD178C31C05157100CA9ED8 /* FBSDKLoginKit.framework in Frameworks */,
@@ -146,6 +152,8 @@
 		5A2297491BB73CE900CD690E /* up */ = {
 			isa = PBXGroup;
 			children = (
+				5A4313A41C54780200B54B60 /* SwiftyJSON.h */,
+				5A4313A51C54780200B54B60 /* SwiftyJSON.swift */,
 				5A22974A1BB73CE900CD690E /* AppDelegate.swift */,
 				5A993C9C1BB7457300010A3E /* LoginController.swift */,
 				5A22974C1BB73CE900CD690E /* FirstViewController.swift */,
@@ -181,6 +189,7 @@
 		5A993C931BB740AA00010A3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A4313A71C54794F00B54B60 /* SwiftyJSON.swift */,
 				5AD178E21C0516E200CA9ED8 /* SwiftRegex.swift */,
 				5AD178B51C05157100CA9ED8 /* Bolts.framework */,
 				5AD178B61C05157100CA9ED8 /* FacebookSDKStrings.bundle */,
@@ -342,6 +351,7 @@
 				5A993C9D1BB7457300010A3E /* LoginController.swift in Sources */,
 				5A39F57C1BF9640800D30DE8 /* ThirdViewController.swift in Sources */,
 				5A22974B1BB73CE900CD690E /* AppDelegate.swift in Sources */,
+				5A4313A61C54780200B54B60 /* SwiftyJSON.swift in Sources */,
 				5A22974D1BB73CE900CD690E /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

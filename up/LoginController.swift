@@ -72,7 +72,39 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+    
+    // JSON Call
+    /////////////
+    /*
+    let postEndpoint: String = "http://localhost:1337/auth/login?type=facebook"
+    guard let url = NSURL(string: postEndpoint) else {
+        print("Error: cannot create URL")
+        return
+    }
+    let urlRequest = NSURLRequest(URL: url)
+    let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+    let session = NSURLSession(configuration: config)
+    let task = session.dataTaskWithRequest(urlRequest, completionHandler: { (data, response, error) in
+        // do stuff with response, data & error here
+        print(response)
+    })
+    task.resume()
+    */
+    ////////////////////
+    ////////////////////
+    
+    
+    
+    /// SwiftyJSON
+    /*
+        let json = JSON(data: dataFromNetworking)
+        let json = JSON(jsonObject)
+        if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
+            let json = JSON(data: dataFromString)
+        }
+    */
+    
+    ///
         if (FBSDKAccessToken.currentAccessToken()==nil){
             print("Not Logged In.")
         }
