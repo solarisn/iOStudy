@@ -36,15 +36,43 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
                 print("One of their friends is: \(userFriends)")
                 let userProfile = result.valueForKey("")
                 print("\(userProfile)")
-                let token = FBSDKAccessToken.currentAccessToken()
-                print("\(token)")
+                let token = FBSDKAccessToken.currentAccessToken().tokenString
+                
+                if ((token) != nil) {
+                    
+                    let postEndpoint: String = "http://studyapplication.herokuapp.com/user/login?token="+token
+                    
+                    print("\(token)")
+                    guard let url = NSURL(string: postEndpoint) else {
+                        print("Error: cannot create URL")
+                        return
+                    }
+                    print(url)
+                    let urlRequest = NSURLRequest(URL: url)
+                    let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+                    let session = NSURLSession(configuration: config)
+                    let task = session.dataTaskWithRequest(urlRequest, completionHandler: { (data, response, error) in
+                        // do stuff with response, data & error here
+                        print(response)
+                        print (data)
+                    })
+                    task.resume()
+                    
+
+                    
+                }
             }
         })
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         returnUserData()
+        
+        
+        
         print("User Logged In")
+        
+        
         
         performSegueWithIdentifier("showHome", sender: nil)
         
@@ -109,12 +137,13 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
             print("Not Logged In.")
         }
         else{
+            FBSDKAccessToken.currentAccessToken()
             print("Logged In.")
             self.performSegueWithIdentifier("showHome", sender: self)
         }
         
         var loginView = FBSDKLoginButton()
-        loginView.readPermissions = ["public_profile","email","user_friends"]
+        loginView.readPermissions = ["public_profile","email","user_friends", "user_birthday","user_education_history","user_location"]
         loginView.center = self.view.center //put in center of screen
         
         loginView.delegate = self
