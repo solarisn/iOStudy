@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Alamofire
 
 
 
