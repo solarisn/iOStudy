@@ -11,6 +11,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Alamofire
+import CoreData
 
 
 
@@ -28,36 +29,95 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
             }
             else
             {
-                print("fetched user: \(result)")
-                let userName = result.valueForKey("name")
-                print("User Name is: \(userName)")
-                let userEmail = result.valueForKey("email")
-                print("User Email is: \(userEmail)")
-                let userFriends = result.valueForKey("friends")
-                print("One of their friends is: \(userFriends)")
-                let userProfile = result.valueForKey("")
-                print("\(userProfile)")
                 let token = FBSDKAccessToken.currentAccessToken().tokenString
                 
                 if ((token) != nil) {
                     
-                    let postEndpoint: String = "http://studyapplication.herokuapp.com/user/login?token="+token
-                    
-                    print("\(token)")
-                    guard let url = NSURL(string: postEndpoint) else {
-                        print("Error: cannot create URL")
-                        return
+                    Alamofire.request(.GET, "http://studyapplication.herokuapp.com/user/login", parameters: ["token": token])
+                        .responseJSON { response in
+                            let res = response.result.value!
+                            
+                            // Initialize User Model
+                            
+                            let appDelegate =
+                            UIApplication.sharedApplication().delegate as! AppDelegate
+                            
+                            let managedContext = appDelegate.managedObjectContext
+                            
+                            let entity =  NSEntityDescription.entityForName("User",
+                                inManagedObjectContext:managedContext)
+                            
+                            let User = NSManagedObject(entity: entity!,
+                                insertIntoManagedObjectContext: managedContext)
+                            /////////////////////////////////////////////////////////////////
+                            
+                            
+                            if (res["user"]! != nil) {
+                                print("There is a user object")
+                                
+                                var person = res["user"]!
+                                let fullName = person!["name"]! as! String
+                                let uniqueID = person!["id"]! as! String
+                                let fbID = person!["FBid"]! as! String
+                                let email = person!["email"]! as! String
+                                let gender = person!["gender"]! as! String
+                                let timezone = person!["timezone"]! as! NSNumber
+                                let jwt = res["jwt"]!!["token"] as! String
+                                let expires = res["jwt"]!!["expires"] as! NSNumber
+                                
+                                User.setValue(fullName, forKey: "fullName")
+                                User.setValue(uniqueID, forKey: "uniqueID")
+                                User.setValue(fbID, forKey: "fbID")
+                                User.setValue(email, forKey: "email")
+                                User.setValue(gender, forKey: "gender")
+                                User.setValue(timezone, forKey: "timezone")
+                                User.setValue(jwt, forKey: "jwt")
+                                User.setValue(expires, forKey: "expires")
+                                
+                                
+                                
+                                
+                            }
+                            else {
+                                print("There is no user object available.")
+                                let jwt = res["token"] as! String
+                                let expires = res["expires"] as! NSNumber
+                                
+                                User.setValue(jwt, forKey: "jwt")
+                                User.setValue(expires, forKey: "expires")
+                                
+                                
+                            }
+                            
+                            
+                            //4
+                            
+                            do {
+                                try managedContext.save()
+                                
+                            } catch let error as NSError  {
+                                print("Could not save \(error), \(error.userInfo)")
+                            }
+                            
+                            //2
+                            let fetchRequest = NSFetchRequest(entityName: "User")
+                            
+                            //3
+                            do {
+                                let results =
+                                try managedContext.executeFetchRequest(fetchRequest)
+                                var Retrieved = results as! [NSManagedObject]
+                                print (Retrieved)
+                                
+                                
+                            } catch let error as NSError {
+                                print("Could not fetch \(error), \(error.userInfo)")
+                            }
+                            
+
+                            
+                            
                     }
-                    print(url)
-                    let urlRequest = NSURLRequest(URL: url)
-                    let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-                    let session = NSURLSession(configuration: config)
-                    let task = session.dataTaskWithRequest(urlRequest, completionHandler: { (data, response, error) in
-                        // do stuff with response, data & error here
-                        print(response)
-                        print (data)
-                    })
-                    task.resume()
                     
 
                     
@@ -67,6 +127,7 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        
         returnUserData()
         
         
@@ -102,38 +163,7 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     
-    // JSON Call
-    /////////////
-    /*
-    let postEndpoint: String = "http://localhost:1337/auth/login?type=facebook"
-    guard let url = NSURL(string: postEndpoint) else {
-        print("Error: cannot create URL")
-        return
-    }
-    let urlRequest = NSURLRequest(URL: url)
-    let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-    let session = NSURLSession(configuration: config)
-    let task = session.dataTaskWithRequest(urlRequest, completionHandler: { (data, response, error) in
-        // do stuff with response, data & error here
-        print(response)
-    })
-    task.resume()
-    */
-    ////////////////////
-    ////////////////////
-    
-    
-    
-    /// SwiftyJSON
-    /*
-        let json = JSON(data: dataFromNetworking)
-        let json = JSON(jsonObject)
-        if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
-            let json = JSON(data: dataFromString)
-        }
-    */
-    
-    ///
+        
         if (FBSDKAccessToken.currentAccessToken()==nil){
             print("Not Logged In.")
         }
@@ -146,7 +176,7 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
         var loginView = FBSDKLoginButton()
         loginView.readPermissions = ["public_profile","email","user_friends", "user_birthday","user_education_history","user_location"]
         loginView.center = self.view.center //put in center of screen
-        
+    
         loginView.delegate = self
         self.view.addSubview(loginView)
         
