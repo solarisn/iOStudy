@@ -10,12 +10,22 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var logs: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        logs.text = "Intended logs"
         
         
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -29,6 +29,8 @@
 		5A8646491C598D9B00B53492 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8645131C598D7A00B53492 /* FBAudienceNetwork.framework */; };
 		5A86464A1C598D9B00B53492 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8645141C598D7A00B53492 /* FBSDKMessengerShareKit.framework */; };
 		5A993C9D1BB7457300010A3E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A993C9C1BB7457300010A3E /* LoginController.swift */; };
+		5AC9FF3C1C62C5C3009563CE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4BF72D1C616B1000F41AFC /* Alamofire.framework */; };
+		5AC9FF3D1C62C5C3009563CE /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4BF72D1C616B1000F41AFC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +153,13 @@
 			remoteGlobalIDString = 856DB049153393C3006F6A33;
 			remoteInfo = SwitchUserSample;
 		};
+		5AC9FF3E1C62C5C3009563CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A4BF7211C616B1000F41AFC /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -160,6 +169,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5AC9FF3D1C62C5C3009563CE /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +450,7 @@
 				5A8646491C598D9B00B53492 /* FBAudienceNetwork.framework in Frameworks */,
 				5A86464A1C598D9B00B53492 /* FBSDKMessengerShareKit.framework in Frameworks */,
 				5A20DFAF1BB763E8007A352C /* libicucore.tbd in Frameworks */,
+				5AC9FF3C1C62C5C3009563CE /* Alamofire.framework in Frameworks */,
 				5A20DFAD1BB763BE007A352C /* CFNetwork.framework in Frameworks */,
 				5A20DFAB1BB763B3007A352C /* Security.framework in Frameworks */,
 				5A20DFA91BB763AD007A352C /* Foundation.framework in Frameworks */,
@@ -1032,6 +1043,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5AC9FF3F1C62C5C3009563CE /* PBXTargetDependency */,
 			);
 			name = up;
 			productName = up;
@@ -1333,6 +1345,11 @@
 			isa = PBXTargetDependency;
 			target = 5A2297461BB73CE900CD690E /* up */;
 			targetProxy = 5A2297691BB73CEA00CD690E /* PBXContainerItemProxy */;
+		};
+		5AC9FF3F1C62C5C3009563CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 5AC9FF3E1C62C5C3009563CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
