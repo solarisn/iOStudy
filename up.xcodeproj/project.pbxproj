@@ -29,6 +29,7 @@
 		5A8646491C598D9B00B53492 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8645131C598D7A00B53492 /* FBAudienceNetwork.framework */; };
 		5A86464A1C598D9B00B53492 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8645141C598D7A00B53492 /* FBSDKMessengerShareKit.framework */; };
 		5A993C9D1BB7457300010A3E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A993C9C1BB7457300010A3E /* LoginController.swift */; };
+		5AA6208A1C6AD31B0082AB9A /* BeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA620891C6AD31B0082AB9A /* BeaconViewController.swift */; };
 		5AC9FF3C1C62C5C3009563CE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4BF72D1C616B1000F41AFC /* Alamofire.framework */; };
 		5AC9FF3D1C62C5C3009563CE /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4BF72D1C616B1000F41AFC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -436,6 +437,7 @@
 		5A8646271C598D7A00B53492 /* SwitchUserSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwitchUserSample-Prefix.pch"; sourceTree = "<group>"; };
 		5A8646281C598D7A00B53492 /* SwitchUserSample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwitchUserSample.xcodeproj; sourceTree = "<group>"; };
 		5A993C9C1BB7457300010A3E /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		5AA620891C6AD31B0082AB9A /* BeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +504,7 @@
 				5A22974A1BB73CE900CD690E /* AppDelegate.swift */,
 				5A993C9C1BB7457300010A3E /* LoginController.swift */,
 				5A22974C1BB73CE900CD690E /* FirstViewController.swift */,
+				5AA620891C6AD31B0082AB9A /* BeaconViewController.swift */,
 				5A22974E1BB73CE900CD690E /* SecondViewController.swift */,
 				5A39F57B1BF9640800D30DE8 /* ThirdViewController.swift */,
 				5A39F57D1BF9647F00D30DE8 /* FourthViewController.swift */,
@@ -1311,6 +1314,7 @@
 				5A22974F1BB73CE900CD690E /* SecondViewController.swift in Sources */,
 				5A993C9D1BB7457300010A3E /* LoginController.swift in Sources */,
 				5A2E1A401C61744D00858935 /* Model.xcdatamodeld in Sources */,
+				5AA6208A1C6AD31B0082AB9A /* BeaconViewController.swift in Sources */,
 				5A39F57C1BF9640800D30DE8 /* ThirdViewController.swift in Sources */,
 				5A22974B1BB73CE900CD690E /* AppDelegate.swift in Sources */,
 				5A22974D1BB73CE900CD690E /* FirstViewController.swift in Sources */,

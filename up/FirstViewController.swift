@@ -15,20 +15,35 @@ import MapKit
 class FirstViewController: UIViewController {
     
     // Map outlet declaration
-    
-    
-    @IBAction func beaconButton(sender: UIButton) {
-        
-        performSegueWithIdentifier("showBeacon", sender: self)
-    }
-    
     @IBOutlet weak var beaconMap: MKMapView!
     
-
+    @IBOutlet var whiteSquare: UIView!
+    
+    @IBAction func beaconButton(sender: AnyObject) {
+        
+        UIView.animateWithDuration(2, animations: {
+            self.whiteSquare.frame = CGRect(x: self.view.center.x,y: self.view.center.y, width: self.view.bounds.width, height: self.view.bounds.height)
+        })
+        print ("it tried")
+        
+    }
+    
+    @IBAction func unwindToViewController (sender: UIStoryboardSegue){
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        let frame = CGRect(x: 0,y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        self.whiteSquare.backgroundColor = UIColor.whiteColor()
+        self.whiteSquare.center.y += self.view.bounds.height
+        //let whiteSquare = UIView(frame: frame)
+        view.addSubview(whiteSquare)
+        
+    }
+    
     
     
     // beaconView beacon overlay outlet
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -42,9 +57,13 @@ class FirstViewController: UIViewController {
         }
         centerMapOnLocation(initialLocation)
         
+        // Create Beacon View
+
+        
         
         
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
