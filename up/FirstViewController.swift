@@ -21,8 +21,11 @@ class FirstViewController: UIViewController {
     
     @IBAction func beaconButton(sender: AnyObject) {
         
-        UIView.animateWithDuration(2, animations: {
-            self.whiteSquare.frame = CGRect(x: self.view.center.x,y: self.view.center.y, width: self.view.bounds.width, height: self.view.bounds.height)
+        var x = view.subviews[0]
+        
+        UIView.animateWithDuration(0.5, animations: {
+            
+           self.whiteSquare.center.y += self.view.bounds.height
         })
         print ("it tried")
         
@@ -33,12 +36,22 @@ class FirstViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         
-        let frame = CGRect(x: 0,y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-        self.whiteSquare.backgroundColor = UIColor.whiteColor()
-        self.whiteSquare.center.y += self.view.bounds.height
-        //let whiteSquare = UIView(frame: frame)
-        view.addSubview(whiteSquare)
         
+        /*
+        whiteSquare.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        
+        whiteSquare.center.y -= self.view.bounds.height
+        */
+        //self.whiteSquare.center.x = self.view.center.x
+        /*
+        let x = self.view.frame.width - 50000
+        
+        let frame = CGRect(x: 20,y: 20, width: 10, height: 10)
+        let whiteSquare = UIView(frame: frame)
+        self.view.addSubview(whiteSquare)
+        //self.whiteSquare.center.y += self.view.bounds.height
+        self.whiteSquare.backgroundColor = UIColor.redColor()
+*/
     }
     
     
@@ -56,12 +69,43 @@ class FirstViewController: UIViewController {
             beaconMap.setRegion(coordinateRegion, animated: true)
         }
         centerMapOnLocation(initialLocation)
+        /**
+        self.whiteSquare.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        
+        self.whiteSquare.center.y -= self.view.bounds.height
+        self.whiteSquare.backgroundColor = UIColor.whiteColor()
+        print (whiteSquare)
+        view.addSubview(whiteSquare)
+        **/
+        
+        /*
+        whiteSquare.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        
+        whiteSquare.center.y -= view.bounds.height
+        */
+        
+        //whiteSquare.center.y -= view.bounds.height
+        
+        
+        
         
         // Create Beacon View
-
+        /*
+        let x = self.view.frame.width - 50000
+        
+        let frame = CGRect(x: 0,y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        let whiteSquare = UIView(frame: frame)
+        whiteSquare.backgroundColor = UIColor.redColor()
+        whiteSquare.center.y -= self.view.bounds.height
+        self.view.addSubview(whiteSquare)
+        //self.whiteSquare.center.y += self.view.bounds.height
+        //self.whiteSquare.backgroundColor = UIColor.redColor()
+        */
         
         
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
     }
     
 

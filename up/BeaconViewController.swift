@@ -13,7 +13,8 @@ class BeaconViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print ("ha")
+        //self.view.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
+        self.view.center.y += self.view.frame.height
 
         // Do any additional setup after loading the view.
     }

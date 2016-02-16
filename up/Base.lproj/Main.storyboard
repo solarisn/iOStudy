@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVA-Wk-MbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="-1267"/>
+            <point key="canvasLocation" x="54" y="-785"/>
         </scene>
         <!--Item-->
         <scene sceneID="hNz-n2-bh7">
@@ -39,28 +39,36 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpV-17-HxW" userLabel="Map View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fD7-bb-EEk">
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fD7-bb-EEk">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                     </mapView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtT-xP-tPi">
-                                        <rect key="frame" x="508" y="56" width="22" height="22"/>
+                                    <button opaque="NO" contentMode="topRight" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtT-xP-tPi">
+                                        <rect key="frame" x="527" y="94" width="22" height="22"/>
+                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <connections>
                                             <action selector="beaconButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="eXq-a3-4uh"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1d-oC-rI7">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lSC-bK-TLT" userLabel="White Square">
+                                        <rect key="frame" x="-2" y="1" width="600" height="552"/>
+                                        <connections>
+                                            <segue destination="Rg4-nA-zYu" kind="embed" id="zgL-z1-pfe"/>
+                                        </connections>
+                                    </containerView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lSC-bK-TLT" secondAttribute="trailing" constant="2" id="6IT-Da-oJO"/>
                                     <constraint firstAttribute="trailing" secondItem="fD7-bb-EEk" secondAttribute="trailing" id="9di-uw-8E9"/>
                                     <constraint firstItem="fD7-bb-EEk" firstAttribute="leading" secondItem="DpV-17-HxW" secondAttribute="leading" id="C97-2D-wEy"/>
-                                    <constraint firstItem="ZtT-xP-tPi" firstAttribute="top" secondItem="DpV-17-HxW" secondAttribute="top" constant="56" id="M43-XY-FvA"/>
+                                    <constraint firstAttribute="bottom" secondItem="lSC-bK-TLT" secondAttribute="bottom" constant="-2" id="Lct-a3-dRV"/>
+                                    <constraint firstItem="fD7-bb-EEk" firstAttribute="top" secondItem="ZtT-xP-tPi" secondAttribute="bottom" constant="-116" id="PoL-7m-qMg"/>
                                     <constraint firstItem="fD7-bb-EEk" firstAttribute="top" secondItem="DpV-17-HxW" secondAttribute="top" id="YoE-t6-Se5"/>
+                                    <constraint firstItem="lSC-bK-TLT" firstAttribute="leading" secondItem="DpV-17-HxW" secondAttribute="leading" constant="-2" id="cR7-yK-jbV"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZtT-xP-tPi" secondAttribute="trailing" constant="51" id="dgd-Ib-aFY"/>
+                                    <constraint firstItem="lSC-bK-TLT" firstAttribute="top" secondItem="DpV-17-HxW" secondAttribute="top" constant="1" id="hwK-Vo-Dfi"/>
                                     <constraint firstAttribute="bottom" secondItem="fD7-bb-EEk" secondAttribute="bottom" id="iOl-a8-OWh"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZtT-xP-tPi" secondAttribute="trailing" constant="70" id="lM0-ii-Fr8"/>
+                                    <constraint firstItem="ZtT-xP-tPi" firstAttribute="top" secondItem="DpV-17-HxW" secondAttribute="top" constant="94" id="kQQ-c1-7zX"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -75,7 +83,6 @@
                     <tabBarItem key="tabBarItem" title="Item" id="wUS-a9-qOs"/>
                     <connections>
                         <outlet property="beaconMap" destination="fD7-bb-EEk" id="Llh-sj-sB9"/>
-                        <outlet property="whiteSquare" destination="k1d-oC-rI7" id="6ei-qT-mBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -181,17 +188,34 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="showHome" id="HRR-6b-awO"/>
+                        <segue destination="WRA-9A-chx" kind="presentation" identifier="showHome" id="n3i-XM-hSY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vID-yv-IHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-761" y="0.0"/>
+            <point key="canvasLocation" x="-1974" y="124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fF5-rK-f9n">
+            <objects>
+                <navigationController id="WRA-9A-chx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uUd-he-KLy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="relationship" relationship="rootViewController" id="PlU-IC-w74"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L97-tY-Ezs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1026" y="-8"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KZO-Z1-Ebo"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -207,7 +231,21 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="2" y="8"/>
+        </scene>
+        <!--Beacon View Controller-->
+        <scene sceneID="bmA-p7-Dqg">
+            <objects>
+                <viewController id="Rg4-nA-zYu" customClass="BeaconViewController" customModule="up" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wzh-nG-3ou" userLabel="view">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="552"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zgm-x4-Ts9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="502.5"/>
         </scene>
     </scenes>
     <resources>
