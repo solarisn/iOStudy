@@ -17,15 +17,16 @@ class FirstViewController: UIViewController {
     // Map outlet declaration
     @IBOutlet weak var beaconMap: MKMapView!
     
-    @IBOutlet var whiteSquare: UIView!
+    @IBOutlet weak var mapView: UIView!
+    //@IBOutlet var whiteSquare: UIView!
     
-    @IBAction func beaconButton(sender: AnyObject) {
+    @IBAction func beaconButton(sender: AnyObject?) {
         
-        var x = view.subviews[0]
+        //var x = view.subviews[0]
         
         UIView.animateWithDuration(0.5, animations: {
             
-           self.whiteSquare.center.y += self.view.bounds.height
+           self.view.subviews[1].center.y += self.view.bounds.height
         })
         print ("it tried")
         
@@ -35,7 +36,6 @@ class FirstViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        
         
         /*
         whiteSquare.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
@@ -60,6 +60,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //navigationBar.tintColor = UIColor.blueColor()
         
         let initialLocation = CLLocation(latitude: 41.661437, longitude: -91.536105)
         let regionRadius: CLLocationDistance = 500
@@ -69,6 +70,13 @@ class FirstViewController: UIViewController {
             beaconMap.setRegion(coordinateRegion, animated: true)
         }
         centerMapOnLocation(initialLocation)
+        
+        var beaconView: UIView = UIView(frame: CGRectMake(0,0,self.view.bounds.width,self.view.bounds.height))
+        beaconView.backgroundColor = UIColor.redColor()
+        beaconView.center.y += self.view.bounds.height
+        self.view.addSubview(beaconView)
+        
+        
         /**
         self.whiteSquare.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
         

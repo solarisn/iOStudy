@@ -22,6 +22,7 @@
 		5A2E1A401C61744D00858935 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E1A3E1C61744D00858935 /* Model.xcdatamodeld */; };
 		5A39F57C1BF9640800D30DE8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A39F57B1BF9640800D30DE8 /* ThirdViewController.swift */; };
 		5A39F57E1BF9647F00D30DE8 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A39F57D1BF9647F00D30DE8 /* FourthViewController.swift */; };
+		5A8638AB1C74466F006F39CD /* BarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8638AA1C74466F006F39CD /* BarController.swift */; };
 		5A8646451C598D9B00B53492 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A86450C1C598D7A00B53492 /* Bolts.framework */; };
 		5A8646461C598D9B00B53492 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A86450E1C598D7A00B53492 /* FBSDKCoreKit.framework */; };
 		5A8646471C598D9B00B53492 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A86450F1C598D7A00B53492 /* FBSDKLoginKit.framework */; };
@@ -200,6 +201,7 @@
 		5A39F57B1BF9640800D30DE8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		5A39F57D1BF9647F00D30DE8 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		5A4BF7211C616B1000F41AFC /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../../dev/libraries/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		5A8638AA1C74466F006F39CD /* BarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarController.swift; sourceTree = "<group>"; };
 		5A86450C1C598D7A00B53492 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		5A86450D1C598D7A00B53492 /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = Frameworks/FacebookSDKStrings.bundle; sourceTree = "<group>"; };
 		5A86450E1C598D7A00B53492 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 				5A39F57B1BF9640800D30DE8 /* ThirdViewController.swift */,
 				5A39F57D1BF9647F00D30DE8 /* FourthViewController.swift */,
 				5A2297501BB73CE900CD690E /* Main.storyboard */,
+				5A8638AA1C74466F006F39CD /* BarController.swift */,
 				5A2E1A3E1C61744D00858935 /* Model.xcdatamodeld */,
 				5A2297531BB73CE900CD690E /* Assets.xcassets */,
 				5A2297551BB73CEA00CD690E /* LaunchScreen.storyboard */,
@@ -1315,6 +1318,7 @@
 				5A993C9D1BB7457300010A3E /* LoginController.swift in Sources */,
 				5A2E1A401C61744D00858935 /* Model.xcdatamodeld in Sources */,
 				5AA6208A1C6AD31B0082AB9A /* BeaconViewController.swift in Sources */,
+				5A8638AB1C74466F006F39CD /* BarController.swift in Sources */,
 				5A39F57C1BF9640800D30DE8 /* ThirdViewController.swift in Sources */,
 				5A22974B1BB73CE900CD690E /* AppDelegate.swift in Sources */,
 				5A22974D1BB73CE900CD690E /* FirstViewController.swift in Sources */,
