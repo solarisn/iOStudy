@@ -12,7 +12,7 @@ import FBSDKLoginKit
 import MapKit
 
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UINavigationBarDelegate {
     
     // Map outlet declaration
     @IBOutlet weak var beaconMap: MKMapView!
@@ -26,7 +26,7 @@ class FirstViewController: UIViewController {
         
         UIView.animateWithDuration(0.5, animations: {
             
-           self.view.subviews[1].center.y += self.view.bounds.height
+           self.view.subviews[0].center.y += self.view.bounds.height
         })
         print ("it tried")
         
@@ -51,7 +51,7 @@ class FirstViewController: UIViewController {
         self.view.addSubview(whiteSquare)
         //self.whiteSquare.center.y += self.view.bounds.height
         self.whiteSquare.backgroundColor = UIColor.redColor()
-*/
+        */
     }
     
     
