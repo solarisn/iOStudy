@@ -12,7 +12,7 @@ class BarController: UINavigationController, UINavigationBarDelegate {
     
     override func viewDidLoad() {
     
-        self.navigationBar.barTintColor = UIColor.redColor()
+        self.navigationBar.barTintColor = UIColor.orangeColor()
     
     
     }
